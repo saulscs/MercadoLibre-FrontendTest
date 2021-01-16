@@ -18,7 +18,7 @@ const parseData = (res, data = {}, type = "") => {
   
         let items = [];
         data.results
-          .slice(0, process.env.RETURN_ITEMS_NUMBER || 4)
+          .slice(0, process.env.ITEMS_LIMIT || 4)
           .forEach((item, index) => {
             const price = item.price.toString().split(".");
             const decimals = price.length == 2 ? price[1] : "0";

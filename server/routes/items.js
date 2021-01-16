@@ -10,9 +10,7 @@ const API_URL = process.env.API;
 //@desc     Get items from API
 //@access   Public
 router.get('/', async (req, res) => {
-    
     const queryItem = req.query["q"];
-
     if (queryItem !== undefined && queryItem !== "") {
       try {
         const responseItem = await axios.get(API_URL + "/sites/MLA/search", {
@@ -34,7 +32,8 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async(req,res) => {
     try{
-        const [responseSingleItem,responseDescription] = await Promise.all([
+        const [responseSingleItem,responseDescription] = await Promise
+          .all([
             axios.get(`${API_URL}/items/${encodeURI(req.params.id)}`),
             axios.get(`${API_URL}/items/${encodeURI(req.params.id)}/description`),
         ]);
