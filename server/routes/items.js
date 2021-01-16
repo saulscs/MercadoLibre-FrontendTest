@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
         parseData(res, responseItem.data, "search");
       } catch (error) {
         console.error(error);
-        parseData(res, { API: "Item not found" });
+        parseData(res, { API: "Server error" });
       }
     } else return parseData(res, { API: "Query Item not found" });
   });
@@ -32,7 +32,24 @@ router.get('/', async (req, res) => {
 //@desc     Get single item from API
 //@access   Public
 
+router.get('/:id', async(req,res) => {
+    try{
+        const [responseSingleItem,responseDescription] = await Promise.all([
+            axios.get(`${API_URL}/items/${encodeURI(req.params.id)}`),
+            axios.get(`${API_URL}/items/${encodeURI(req.params.id)}/description`),
+        ]);
+        const responseCategories = await axios.get(`${API_URL}/categories/${encodeURI(responseSingleItem.data.category_id)}`);
 
+        parseData(res, {
+                item: responseSingleItem.data, 
+                description: responseDescription.data,
+                categories: responseCategories.data 
+            },"single");
+    }catch(error){
+        console.error(error);
+        parseData(res, { API: "Server error" });
+    }
+});
 
 
 
