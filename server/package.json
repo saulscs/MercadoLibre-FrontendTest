@@ -4,7 +4,8 @@
   "description": "MercadoLibre-FrontendTest",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "server": "nodemon server"
   },
   "author": "Saul Corona",
   "license": "MIT",
