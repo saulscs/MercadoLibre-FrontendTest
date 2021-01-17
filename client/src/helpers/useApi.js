@@ -13,7 +13,7 @@ const useApi = (props) => {
     if (
         value !== null &&
         (value.author.name !== process.env.REACT_APP_AUTHOR_NAME ||
-            value.author.lastname !== REACT_APP_LAST_NAME)
+            value.author.lastname !== process.env.REACT_APP_LAST_NAME)
     ) {
         throw new Error("Unauthorized sign");
     }
