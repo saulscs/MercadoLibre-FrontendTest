@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Loading from '../Constant /loader';
 import ProductListItem from './productListItem';
 import useApi from '../../helpers/useApi';
+import BreadCrubs from '../BreadCrubs';
 
 const ProductList = props => {
     function useQuery () {
@@ -15,19 +16,23 @@ const ProductList = props => {
     else if (error !== null) return <h3>Error</h3>;
     else {
         return(
-            <div className="results">
-               {!products.items.length ? (
-                   <h2>Vacio</h2>
-               ) : (
-                   products.items.map((product,index) => (
-                    <ProductListItem
-                        key={product.id}
-                        index={index}
-                        product={product}
-                    />
-                   ))
-               )}
-            </div> 
+            <Fragment>
+                <BreadCrubs breadCrumbs={products.categories}/>
+                <div className="results">
+                {!products.items.length ? (
+                    <h2>Vacio</h2>
+                ) : (
+                    products.items.map((product,index) => (
+                        <ProductListItem
+                            key={product.id}
+                            index={index}
+                            product={product}
+                        />
+                    ))
+                )}
+                </div> 
+            </Fragment>
+            
         );
     }
     

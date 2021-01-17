@@ -18,12 +18,14 @@ const ProductListItem = ({
                         </div>
                     </Link>
                     <div className="productCard__detail">
+                    <Link to={`/items/${id}`}>
                         <div className="productCard__price">
                             <Price price={price}/>
                             {free_shipping && (
                                 <img src={freeShipping} alt="free-shipping"/>
                             )}
                         </div>
+                    </Link>
                         <div>
                             <h3>{title}</h3>
                         </div>

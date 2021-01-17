@@ -1,8 +1,9 @@
 .productCard{
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     border-bottom: 1px solid var(--gray-white-color);
-    margin: 1rem;
+    padding: 1rem;
 }
 
 .productCard__description{
@@ -11,7 +12,7 @@
 }
 
 .productCard__image{
-    width: 180px;
+    width: auto;
     height: 180px;
     padding-right: 1rem;
     padding-top: 1rem;
@@ -58,7 +59,17 @@
 }
 
 @media screen and (min-width:768px){
+    .productCard{
+        flex-direction: row;
+    }
+    .productCard__image{
+        width: 180px;
+    }
     .productCard__description{
         flex-direction: row;
     }
+}
+
+@media screen and (min-width:1024px){
+
 }

@@ -1,18 +1,20 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 import "./breadCrubs.css"
 
-const BreadCrubs = () => {
+const BreadCrumbs = ({ breadCrumbs }) => {
+    let categories;
+    if(breadCrumbs){
+        categories = breadCrumbs.map(breadCrumb => {
+            return <Link className="breadcrumbs__categories" to={`/items?q=${breadCrumb}`  }> <span key={breadCrumb.id} >{breadCrumb}</span></Link>
+        })
+    }
     return(
         <div className="breadcrumbs">
-            <span className="breadcrumbs__categories">
-                Electrónica,Audio y Video
-            </span>
-            <span className="breadcrumbs__categories">
-              <b>Audio</b>  
-            </span>
+            {categories}
         </div>
     )
 }
+    
 
-export default BreadCrubs;
+export default BreadCrumbs;
