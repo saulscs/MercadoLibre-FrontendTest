@@ -20,7 +20,9 @@ const Navbar = ( ) => {
     <header className="header">
         <section className="header__section grid">
             <div className="header__logo">
-                <img src={MercadoLogo} alt="MercadoLibre-logo"/>
+                <Link to="/">
+                    <img src={MercadoLogo} alt="MercadoLibre-logo"/>
+                </Link>
             </div>
             <div className="searchBox">
                 <form className="searchBox__form"  onSubmit={handleSubmit}>

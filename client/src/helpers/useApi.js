@@ -1,15 +1,15 @@
 import useFetch from "./useFetch";
 
 
-const useApi = (props) => {
-    let {url, method = "GET", body = null, header = []} = props;
-    const fecthApi = useFetch(
-        `${url}`,
+const useApi = (url, method = "GET", body = null, header = []) => {
+    // let {url, method = "GET", body = null, header = []} = props;
+    const fetchApi = useFetch(
+        `http://localhost:5000/${url}`,
         method,
         body,
         header
     );
-    const { value } = fecthApi;
+    const { value } = fetchApi;
     if (
         value !== null &&
         (value.author.name !== process.env.REACT_APP_AUTHOR_NAME ||
@@ -17,7 +17,7 @@ const useApi = (props) => {
     ) {
         throw new Error("Unauthorized sign");
     }
-    return fecthApi;
+    return fetchApi;
 };
 
 export default useApi;

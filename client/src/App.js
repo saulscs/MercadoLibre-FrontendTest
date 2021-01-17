@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import BreadCrubs from './components/BreadCrubs';
 import Routes from './components/Routing/routes';
 
-
 function App() {
   
   return (
