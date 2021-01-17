@@ -11,16 +11,13 @@ const ProductList = props => {
     const q = query.get("q");
     const {value: products, error,loading} = useApi(`items?q=${q}`);
 
-
-    
-    
-    if(loading) return <Loading/>;
+    if(loading) return <div className="results"> <Loading/> </div> ;
     else if (error !== null) return <h3>Error</h3>;
     else {
         return(
             <div className="results">
                {!products.items.length ? (
-                   <h3>Vacio</h3>
+                   <h2>Vacio</h2>
                ) : (
                    products.items.map((product,index) => (
                     <ProductListItem

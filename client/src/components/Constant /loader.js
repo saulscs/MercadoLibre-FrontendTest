@@ -4,7 +4,10 @@ import LoaderImg from '../../assets/loader.svg'
 
 const Loading = ( ) => {
     return(
-        <img src={LoaderImg} alt="Loader"/>
+        <div className="loader">
+            <img src={LoaderImg} alt="Loader"/>
+        </div>
+        
     )
 }
 

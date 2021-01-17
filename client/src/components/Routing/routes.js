@@ -4,7 +4,7 @@ import ProductList from '../Products/productList';
 import ProductDetail from '../Products/productDetail';
 
 
-const Routes = props => {
+const Routes = () => {
     return(
         <Switch>
             <Route path="/items" component={ProductList}/>

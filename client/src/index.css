@@ -41,6 +41,10 @@ img{
     border-radius: 4px;
 }
 
+a{
+    text-decoration: none;
+}
+
 /******* Utilities ******/
 
 /*Results*/
@@ -48,7 +52,6 @@ img{
 .results{
     background-color: var(--white);
     border-radius: 4px;
-    padding: 1rem;
     grid-area: span 1 / span 12;
     overflow: hidden;
 }
@@ -64,4 +67,12 @@ img{
     margin: auto;
     gap: 10px;
     overflow: hidden;
+}
+
+/*Loader*/
+.loader{
+    margin: 0.5rem auto;
+    display: block;
+    width: 4rem;
+    height: 4rem;
 }

@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-
+import Price from '../../utils/price'
 import freeShipping from '../../assets/ic_shipping.png'
 import "./productListItem.css"
 
 const ProductListItem = ({
         product:{location, title, price, picture, id, free_shipping}
     }) => {
-    
+
     return(
         <>
             <article className="productCard">
@@ -18,12 +18,15 @@ const ProductListItem = ({
                         </div>
                     </Link>
                     <div className="productCard__detail">
+                    <Link to={`/items/${id}`}>
                         <div className="productCard__price">
-                            {/* <span>{price}</span> */}
+                            <Price price={price}/>
                             {free_shipping && (
                                 <img src={freeShipping} alt="free-shipping"/>
                             )}
                         </div>
+                    </Link>
+                        
                         <div>
                             <h3>{title}</h3>
                         </div>
