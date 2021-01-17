@@ -1,0 +1,72 @@
+/*Header*/
+
+.header{
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: var(--first-color);
+}
+
+.header__logo{
+    width: 53px;
+    margin-top: 15px;
+}
+
+.header__section{
+    align-items: center;
+}
+
+/*Search bar*/
+
+.searchBox{
+    grid-area: span 2 / span 10;
+}
+
+
+.searchBox__form{
+    width: 100%;
+    display: flex;
+    height: 2.2rem;
+}
+
+.searchBox__form > input{
+    width: 100%;
+    height: 100%;
+    color: var(--gray-dark-color);
+    font-size: 0.75rem;
+    padding: 0rem 1rem;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+}
+
+.searchBox__form > input::placeholder{
+    color: var(--gray-light-color);
+}
+
+.searchBox__form > button{
+    background-image: url('../../assets/ic_Search.png');
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: center;
+    height: 100%;
+    width: 2.4rem;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid var(--gray-white-color);
+    cursor: pointer;
+}
+
+
+@media screen and (min-width:768px){
+    .searchBox{
+        grid-area: span 2 / span 11;
+    }
+    .searchBox__form > input{
+        font-size: 1.125rem;
+    }
+}
