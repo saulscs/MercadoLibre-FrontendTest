@@ -7,8 +7,8 @@ import ProductDetail from '../Products/productDetail';
 const Routes = () => {
     return(
         <Switch>
-            <Route path="/items" component={ProductList}/>
-            <Route path="/items:id" component={ProductDetail}/>
+            <Route exact path="/items" component={ProductList}/>
+            <Route exact path="/items/:id" component={ProductDetail}/>
         </Switch>
     )
 }
