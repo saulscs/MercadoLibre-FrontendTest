@@ -71,5 +71,7 @@
 }
 
 @media screen and (min-width:1024px){
-
+    .productCard__dcProduct{
+        max-width: 80%;
+    }
 }

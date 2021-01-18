@@ -26,7 +26,7 @@ const ProductListItem = ({
                             )}
                         </div>
                     </Link>
-                        <div>
+                        <div className="productCard__dcProduct">
                             <h3>{title}</h3>
                         </div>
                     </div>

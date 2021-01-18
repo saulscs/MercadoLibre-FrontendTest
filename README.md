@@ -9,11 +9,12 @@
 * Axios
  
 ### Implemented:
-React hooks
-Grid & Flexbox
-Fluid Design
+* React hooks
+* Grid & Flexbox
+* Fluid Design
     
 
+Clone or download project
 
 ## Frontend
 
@@ -77,6 +78,7 @@ Open your browser in http://localhost:5000/
 * Search 
 
 `https://api.mercadolibre.com/sites/MLA/search?q=:query`
+
 * Product detail
 `https://api.mercadolibre.com/items/:id`
 
@@ -84,4 +86,5 @@ Open your browser in http://localhost:5000/
 
 `https://api.mercadolibre.com/categories/:category_id`
 
-https://i.imgur.com/Lnp5PFD.gif
+
+
