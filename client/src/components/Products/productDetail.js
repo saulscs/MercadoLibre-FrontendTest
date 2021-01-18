@@ -14,7 +14,7 @@ const ProductDetail = () => {
     const {value: product,error,loading} = useApi(`items/${id}`);
 
     if(loading) return <div className="results"> <Loading/> </div> ;
-    else if (error !== null) return <h3>Error</h3>;
+    else if (error !== null) return <h3>Producto no encontrado</h3>;
     else {
         const {
             picture,
@@ -57,7 +57,6 @@ const ProductDetail = () => {
                     </div> 
                 </div>
             </Fragment>
-            
         )
     }    
 }

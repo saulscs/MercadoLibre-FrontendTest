@@ -14,7 +14,7 @@ const ProductList = props => {
     const {value: products, error,loading} = useApi(`items?q=${q}`);
 
     if(loading) return <div className="results"> <Loading/> </div> ;
-    else if (error !== null) return <h3>Error</h3>;
+    else if (error !== null) return <h3>Producto no encontrado</h3>;
     else {
         return(
             <Fragment>
