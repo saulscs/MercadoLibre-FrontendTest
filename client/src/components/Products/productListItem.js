@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { Link } from "react-router-dom";
 import Price from '../../utils/price'
-import freeShipping from '../../assets/ic_shipping.png'
+import freeShipping from '../../assets/images/ic_shipping.png'
 import "./productListItem.css"
 
 const ProductListItem = ({

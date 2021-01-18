@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Routes from './components/Routing/routes';
+import Navbar from './components/navbar/nav';
+import Routes from './components/routing/routes';
 
 function App() {
   

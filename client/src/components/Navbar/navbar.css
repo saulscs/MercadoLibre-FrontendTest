@@ -49,7 +49,7 @@
 }
 
 .searchBox__form > button{
-    background-image: url('../../assets/ic_Search.png');
+    background-image: url('../../assets/images/ic_Search.png');
     background-repeat: no-repeat;
     background-size: 1rem;
     background-position: center;

@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
-import Loading from '../Constant /loader';
+import Loading from '../shared/loader/loader';
 import ProductListItem from './productListItem';
-import useApi from '../../helpers/useApi';
-import BreadCrubs from '../BreadCrubs';
+import useApi from '../../hooks/useApi';
+import BreadCrubs from '../shared/breadCrubs/breadCrubs';
 
 const ProductList = props => {
     function useQuery () {

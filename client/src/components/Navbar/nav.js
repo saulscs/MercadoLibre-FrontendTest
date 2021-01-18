@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, useHistory } from "react-router-dom";
-import useSearch from '../../helpers/useSearch';
+import useSearch from '../../hooks/useSearch';
 
 import "./navbar.css";
-import MercadoLogo from '../../assets/Logo_ML@2x.png.png';
+import MercadoLogo from '../../assets/images/Logo_ML@2x.png.png';
 
 
 const Navbar = ( ) => {

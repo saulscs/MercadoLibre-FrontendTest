@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
 import {useParams} from 'react-router-dom';
-import Loading from '../Constant /loader';
-import useApi from '../../helpers/useApi';
+import Loading from '../shared/loader/loader';
+import useApi from '../../hooks/useApi';
 import Price from '../../utils/price';
-import BreadCrubs from '../BreadCrubs';
+import BreadCrubs from '../shared/breadCrubs/breadCrubs';
+import BtnPrimary from '../shared/buttons/buttons'
 
 import "./productDetail.css"
 
@@ -11,7 +12,7 @@ const ProductDetail = () => {
     const {id} = useParams();
     const {value: product,error,loading} = useApi(`items/${id}`);
 
-    if(loading) return <div classNameName="results"> <Loading/> </div> ;
+    if(loading) return <div className="results"> <Loading/> </div> ;
     else if (error !== null) return <h3>Error</h3>;
     else {
         const {
@@ -21,6 +22,7 @@ const ProductDetail = () => {
             price,
             description,
             sold_quantity,
+            
         } = product.item;
         const { name, lastname } = product.author;
         
@@ -39,7 +41,7 @@ const ProductDetail = () => {
                                 </span>
                                 <h2 className="product__detail--name">{title}</h2>
                                 <span className="product__detail--price"> <Price price={price} showDecimals /></span>
-                                <button className="product__detail--button">Comprar</button>
+                                <BtnPrimary title="Comprar"/>
                             </div>
                         </div>
                         <div  className="product__description">
