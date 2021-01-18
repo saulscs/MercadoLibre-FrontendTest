@@ -79,8 +79,9 @@ Open your browser in http://localhost:5000/
 `https://api.mercadolibre.com/sites/MLA/search?q=:query`
 * Product detail
 `https://api.mercadolibre.com/items/:id`
+
 `https://api.mercadolibre.com/items/:id/description`
+
 `https://api.mercadolibre.com/categories/:category_id`
 
-
-![](https://i.imgur.com/Lnp5PFD.gif)
+https://i.imgur.com/Lnp5PFD.gif
