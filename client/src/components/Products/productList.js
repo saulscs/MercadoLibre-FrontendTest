@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { Helmet } from "react-helmet";
 import Loading from '../shared/loader/loader';
 import ProductListItem from './productListItem';
 import useApi from '../../hooks/useApi';
@@ -17,6 +18,9 @@ const ProductList = props => {
     else {
         return(
             <Fragment>
+                <Helmet>
+                    <title>Encuentra {`${q}`} en Mercado Libre</title>
+                </Helmet>
                 <BreadCrubs breadCrumbs={products.categories}/>
                 <div className="results">
                 {!products.items.length ? (

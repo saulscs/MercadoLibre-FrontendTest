@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import {useParams} from 'react-router-dom';
+import { Helmet } from "react-helmet";
 import Loading from '../shared/loader/loader';
 import useApi from '../../hooks/useApi';
 import Price from '../../utils/price';
@@ -28,6 +29,11 @@ const ProductDetail = () => {
         
         return(
             <Fragment>
+                <Helmet>
+                    <title>{title}</title>
+                    <meta name="author" content={`${name}-${lastname}`}/>
+                    <meta name="description" content={`${description}`}/>
+                </Helmet>
                 <BreadCrubs breadCrumbs={product.categories}/>
                 <div className="results">
                     <div className="product--container">
